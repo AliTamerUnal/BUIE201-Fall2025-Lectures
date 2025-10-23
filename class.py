@@ -1,12 +1,19 @@
 class Student:
-    grade = 0.0
-    def Study():
-        print ('I am studying')
+    def __init__(self, g, n):
+        self.grade = g
+        self.name = n
 
-tamer = Student()
-tamer.grade = 4.0
-ayse = Student()
-ayse.grade = 3.0
-fatma = Student()
-fatma.grade = 2.0
+    def Study(self):
+        print (self.name + ' is studying')
+
+Students = [Student(1.0, "tamer"), ## implicitly calls __init__(address of the new object being created)
+                Student(2.0, "ayse"),
+                Student(3.0, "fatma")]
+
+for st in Students:
+    print (st.grade)
+
+for st in Students:
+    st.Study()
+
 
