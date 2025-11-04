@@ -1,3 +1,9 @@
+def SearchIterative_0(ls, x):
+    for i in ls:
+        if i == x:
+            return ls.index(i)
+    return None
+
 def SearchIterative_1(ls, x):
     index = 0
     for i in ls:
