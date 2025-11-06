@@ -24,6 +24,10 @@ class DAG:
 
         min = None
         for a in self.incomming_arcs(v):
+            # check if the minpathdict has a calculated min duration
+            # for (s, a.from_node). If we have the value, use it.
+            # otherwise call self.SP(s, a.from_node) and insert it to
+            # the minpathdict
             length = a.distance + self.SP(s, a.from_node)
             if (min is None or length < min):
                 min = length
